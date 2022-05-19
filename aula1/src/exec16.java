@@ -19,12 +19,12 @@ public class exec16 {
             numeros2[i] = in.nextInt();
         }
 
-        for(int valor1 : numeros1) {
+        for (int valor1 : numeros1) {
             boolean achou = false;
             for (int valor2 : numeros2) {
-                if(valor1 == valor2) {
+                if (valor1 == valor2) {
                     achou = true;
-                        break;
+                    break;
                 }
             }
             if (!achou) {
