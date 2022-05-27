@@ -1,4 +1,5 @@
 import classes.*;
+import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class Main {
         System.out.println("(4) - Hot Dog");
         System.out.println("(5) - Mini Pizza - Calabresa");
         int escolha = in.nextInt();
+        in.nextLine();
         Lanche lanche = null;
         switch (escolha) {
             case 1:
@@ -38,24 +40,38 @@ public class Main {
             default:
                 System.err.println("Escolha uma opção válida!");
         }
-        if (escolha == 1 || escolha == 2) {
-            System.out.println("Lanche aberto? (S/N)");
-            in.nextLine();
-            String aberto = in.next();
-            ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
-        } else if (escolha == 5) {
-
+        if (lanche instanceof Sanduiche) {
+            System.out.println("Deseja adicionais? (S/N)");
+            String adicionais = in.nextLine();
+            if (adicionais.equalsIgnoreCase("S")){
+                for(int i = 0; i < 10; i++) {
+                    System.out.print("Informe o adicional: ");
+                    ((Sanduiche) lanche).adicionarAdicional(in.nextLine());
+                    System.out.println("Deseja adicionar mais adicionais? (S/N)");
+                    String parada = in.nextLine();
+                    if (parada.equalsIgnoreCase("N")) {
+                        break;
+                    }
+                }
+            }
+            if (lanche instanceof XBurguer) {
+                System.out.println("Lanche aberto? (S/N)");
+                String aberto = in.next();
+                ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
+            }
+        } else {
 
             System.out.println("Com Borda Recheada? (S/N)");
-            in.nextLine();
             String bordaRecheada = in.nextLine();
             MiniPizza miniPizza = ((MiniPizza) lanche);
             miniPizza.bordaRecheada = bordaRecheada.equalsIgnoreCase("S");
             if (miniPizza.bordaRecheada) {
                 System.out.println("Qual o sabor da borda?");
                 miniPizza.sabordaBorda = in.nextLine();
-
             }
+            if (escolha != 5);
+            System.out.println("QUER ADICIONAL? (S/N)");
+            String s = in.nextLine();
             System.out.print("Informe o valor do(a)" + lanche.tipo + ": R$");
             {
                 lanche.valor = in.nextDouble();

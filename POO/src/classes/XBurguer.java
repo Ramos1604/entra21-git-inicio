@@ -1,6 +1,6 @@
 package classes;
 
-public class XBurguer extends Lanche {
+public class XBurguer extends Sanduiche {
 
 
     public boolean aberto;
@@ -9,7 +9,6 @@ public class XBurguer extends Lanche {
         this.adicionarIngrediente("Hamburguer");
         this.adicionarIngrediente("Queijunto");
         this.adicionarIngrediente("Preijo");
-        this.adicionarIngrediente("Pão");
         this.tipo = "XBurguer";
     }
 
