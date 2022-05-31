@@ -1,8 +1,8 @@
 package classes;
 
-public class HotDog extends Sanduiche{
+public class HotDog extends Sanduiche {
 
-    public HotDog () {
+    private HotDog() {
         this.adicionarIngrediente("Salsicha");
         this.adicionarIngrediente("Purê de batata");
         this.adicionarIngrediente("Batata palha");
@@ -10,7 +10,6 @@ public class HotDog extends Sanduiche{
         this.adicionarIngrediente("Queijo Cheddar");
         this.adicionarIngrediente("Milho");
         this.adicionarIngrediente("Ervilha");
-        this.tipo  = "HotDog";
+        this.tipo = "HotDog";
     }
-
 }

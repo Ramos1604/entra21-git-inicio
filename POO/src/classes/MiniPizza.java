@@ -3,30 +3,76 @@ package classes;
 import java.util.Locale;
 
 public class MiniPizza extends Lanche {
-    public boolean bordaRecheada;
-    public String sabordaBorda;
+    private boolean bordaRecheada;
+    private String sabordaBorda;
+    private String sabor;
 
 
     public MiniPizza() {
 
-        this.adicionarIngrediente("Queijo");
         this.adicionarIngrediente("Massa");
         this.adicionarIngrediente("Massa de Tomate");
-        this.adicionarIngrediente("Oregano");
-        this.adicionarIngrediente("Catupiry");
-        this.adicionarIngrediente("Calabresa");
-        this.adicionarIngrediente("Cebola");
+        this.adicionarIngrediente("Mozzarella");
         this.tipo = "Mini Pizza";
 
-
     }
-
+    public void adicionarSaborEIngredientes(String sabor) {
+        this.setSabor(sabor);
+        switch(sabor.toUpperCase()) {
+            case "4 QUEIJOS":
+                this.adicionarIngrediente("CHEDDAR");
+                this.adicionarIngrediente("Catupiry");
+                this.adicionarIngrediente("Provolone");
+                break;
+            case "CALABRESA":
+                this.adicionarIngrediente("Calabresa");
+                break;
+            case "FRANGO C/ CATUPIRY":
+                this.adicionarIngrediente("Frango");
+                this.adicionarIngrediente("Catupiry");
+                break;
+            case "MARGUERITA":
+                this.adicionarIngrediente("Tomate");
+                this.adicionarIngrediente("Majericão");
+                break;
+            case "PORTUGUESA":
+                this.adicionarIngrediente("Presunto");
+                this.adicionarIngrediente("Cebola");
+                this.adicionarIngrediente("Ovo");
+                break;
+        }
+    }
     @Override
     public void montarComanda() {
         super.montarComanda();
         if (this.bordaRecheada) {
-            System.out.println("-- COM BORDA RECHEADA: "+ sabordaBorda +"--");
+            System.out.println("-- COM BORDA RECHEADA: "+this.getSabordaBorda()+"--");
 
         }
     }
+
+    public void setBordaRecheada(boolean bordaRecheada) {
+        this.bordaRecheada = bordaRecheada;
+    }
+
+    public boolean isBordaRecheada() {
+        return this.bordaRecheada;
+    }
+
+    public void setSabordaBorda(String sabordaBorda) {
+        this.sabordaBorda = sabordaBorda;
+    }
+
+    public String getSabordaBorda() {
+        return this.sabordaBorda;
+    }
+
+    public void setSabor(String sabor) {
+        this.sabor = sabor;
+    }
+
+    public String getSabor() {
+        return this.sabor;
+    }
+
 }
