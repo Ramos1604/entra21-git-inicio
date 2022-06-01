@@ -1,6 +1,4 @@
-package classes;
-
-import java.util.Locale;
+package classes.lanches;
 
 public class MiniPizza extends Lanche {
     private boolean bordaRecheada;

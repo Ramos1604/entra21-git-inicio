@@ -1,6 +1,4 @@
-package classes;
-
-import org.w3c.dom.ls.LSOutput;
+package classes.lanches;
 
 public class XSalada extends XBurguer{
 
