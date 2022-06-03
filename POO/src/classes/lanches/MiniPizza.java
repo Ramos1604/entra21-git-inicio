@@ -11,7 +11,7 @@ public class MiniPizza extends Lanche {
         this.adicionarIngrediente("Massa");
         this.adicionarIngrediente("Massa de Tomate");
         this.adicionarIngrediente("Mozzarella");
-        this.tipo = "Mini Pizza";
+        this.setSetTipo("Mini Pizza");
 
     }
     public void adicionarSaborEIngredientes(String sabor) {
@@ -38,14 +38,6 @@ public class MiniPizza extends Lanche {
                 this.adicionarIngrediente("Cebola");
                 this.adicionarIngrediente("Ovo");
                 break;
-        }
-    }
-    @Override
-    public void montarComanda() {
-        super.montarComanda();
-        if (this.bordaRecheada) {
-            System.out.println("-- COM BORDA RECHEADA: "+this.getSabordaBorda()+"--");
-
         }
     }
 

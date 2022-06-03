@@ -8,6 +8,14 @@ public class Main {
         montarLanche();
     }
 
+    public static Scanner getIn() {
+        return in;
+    }
+
+    public static void setIn(Scanner in) {
+        Main.in = in;
+    }
+
     private static void montarLanche() {
         System.out.println("-MENU: Escolha uma opção- ");
         System.out.println("(1) - X-Salada");
@@ -57,8 +65,8 @@ public class Main {
             }
             if (lanche instanceof XBurguer) {
                 System.out.println("Lanche aberto? (S/N)");
-                String aberto = in.next();
-                ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
+                String aberto = in.nextLine();
+                ((XBurguer) lanche).setAberto(aberto.equalsIgnoreCase("S"));
             }
         } else {
             System.out.println("Escolha o sabor da pizza:");
@@ -108,8 +116,7 @@ public class Main {
                 miniPizza.setSabordaBorda(in.nextLine());
             }
         }
-        System.out.print("Informe o valor do(a)" + lanche.tipo + ": R$");
-        lanche.valor = in.nextDouble();
-        lanche.montarComanda();
+        System.out.print("Informe o valor do(a)" + lanche.getSetTipo()+ ": R$");
+        lanche.setValor(in.nextDouble());
     }
 }

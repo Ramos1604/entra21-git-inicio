@@ -17,7 +17,7 @@ public class cliente {
         this.nome = nome;
     }
 
-    private String nome;
+    public String nome;
 
     public Pedido getPedido() {
         return pedido;
@@ -27,6 +27,6 @@ public class cliente {
         this.pedido = pedido;
     }
 
-    private Pedido pedido;
+    public Pedido pedido;
 
 }
