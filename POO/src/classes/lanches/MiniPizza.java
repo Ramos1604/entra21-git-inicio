@@ -11,7 +11,7 @@ public class MiniPizza extends Lanche {
         this.adicionarIngrediente("Massa");
         this.adicionarIngrediente("Massa de Tomate");
         this.adicionarIngrediente("Mozzarella");
-        this.setSetTipo("Mini Pizza");
+        this.setTipo("Mini Pizza");
 
     }
     public void adicionarSaborEIngredientes(String sabor) {

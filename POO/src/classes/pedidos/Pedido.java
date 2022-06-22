@@ -40,9 +40,9 @@ public class Pedido {
             }
             if (l instanceof Sanduiche) {
                 Sanduiche s = (Sanduiche) l;
-                if (s.getAd()[0] != null) {
+                if (s.getAdicionais()[0] != null) {
                     System.out.println("-ADICIONAIS-");
-                    for (String adicional : s.getAd()) {
+                    for (String adicional : s.getAdicionais()) {
                         if (adicional != null) {
                             System.out.println(adicional);
                         }

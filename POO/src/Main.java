@@ -116,7 +116,7 @@ public class Main {
                 miniPizza.setSabordaBorda(in.nextLine());
             }
         }
-        System.out.print("Informe o valor do(a)" + lanche.getSetTipo()+ ": R$");
+        System.out.print("Informe o valor do(a)" + lanche.getTipo()+ ": R$");
         lanche.setValor(in.nextDouble());
     }
 }
