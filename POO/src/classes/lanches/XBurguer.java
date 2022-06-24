@@ -17,7 +17,7 @@ public class XBurguer extends Sanduiche {
         this.adicionarIngrediente("Hamburguer");
         this.adicionarIngrediente("Queijunto");
         this.adicionarIngrediente("Preijo");
-        this.setSetTipo("XBurguer");
+        this.setTipo("XBurguer");
     }
 }
 

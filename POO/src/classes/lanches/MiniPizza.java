@@ -1,6 +1,6 @@
 package classes.lanches;
 
-public class MiniPizza extends Lanche {
+    public abstract class MiniPizza extends Lanche {
     private boolean bordaRecheada;
     private String sabordaBorda;
     private String sabor;

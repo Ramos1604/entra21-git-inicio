@@ -55,7 +55,7 @@ public class Main {
             if (adicionais.equalsIgnoreCase("S")) {
                 for (int i = 0; i < 10; i++) {
                     System.out.print("Informe o adicional: ");
-                    ((Sanduiche) lanche).adicionarAdicional(in.nextLine());
+                    ((Sanduiche) lanche).adicionarAdicional(in.nextLine(), in.nextDouble());
                     System.out.println("Deseja adicionar mais adicionais? (S/N)");
                     String parada = in.nextLine();
                     if (parada.equalsIgnoreCase("N")) {

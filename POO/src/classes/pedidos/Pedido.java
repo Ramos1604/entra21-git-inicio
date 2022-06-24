@@ -1,7 +1,6 @@
 package classes.pedidos;
 
 import classes.lanches.*;
-import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.ArrayList;
 
@@ -16,7 +15,7 @@ public class Pedido {
         for (Lanche l : this.getLanches()) {
             if (l instanceof MiniPizza) {
                 MiniPizza mp = ((MiniPizza) l);
-                System.out.println("===" + l.getSetTipo() + " - " + mp.getSabor() + "===");
+                System.out.println("===" + l.getTipo() + " - " + mp.getSabor() + "===");
                 if (mp.isBordaRecheada()) {
                     System.out.println("-- COM BORDA RECHEADA: " + mp.getSabordaBorda() + "--");
                 }
@@ -24,7 +23,7 @@ public class Pedido {
                     System.out.println("Tamanhos: " + ((Pizza) l).getTamanho());
                 }
             } else {
-                System.out.println("===" + l.getSetTipo() + "===");
+                System.out.println("===" + l.getTipo() + "===");
             }
             if (l instanceof XBurguer) {
                 if (((XBurguer) l).isAberto()) {
@@ -42,8 +41,8 @@ public class Pedido {
                 Sanduiche s = (Sanduiche) l;
                 if (s.getAdicionais()[0] != null) {
                     System.out.println("-ADICIONAIS-");
-                    for (String adicional : s.getAdicionais()) {
-                        if (adicional != null) {
+                    for (String adicionais : s.getAdicionais()) {
+                        if (adicionais != null) {
                             System.out.println(adicional);
                         }
                     }

@@ -1,10 +1,10 @@
 package classes.lanches;
 
-public class Pizza extends MiniPizza{
+    public abstract class Pizza extends MiniPizza{
     private String tamanho;
 
     public Pizza() {
-        this.setSetTipo("Pizza");
+        this.setTipo("Pizza");
     }
 
 
