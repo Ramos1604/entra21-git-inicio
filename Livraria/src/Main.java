@@ -16,10 +16,6 @@ public class Main {
         System.out.println("(1) - DVD");
         System.out.println("(2) - Livro");
     }
-
-
-
-
         Livro l = new Livro();
         l.setTitulo("Harry Potter e a Autora Transfóbica");
         l.avaliar();

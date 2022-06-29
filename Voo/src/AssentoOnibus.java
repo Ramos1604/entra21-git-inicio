@@ -1,7 +1,5 @@
-public class AssentoOnibus {
-
+public class AssentoOnibus extends Assento{
     private String lugar;
-
 
     public String getLugar() {
         return lugar;
@@ -10,5 +8,4 @@ public class AssentoOnibus {
     public void setLugar(String lugar) {
         this.lugar = lugar;
     }
-
 }

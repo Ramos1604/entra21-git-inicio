@@ -1,12 +1,11 @@
 public abstract class Assento {
 
-    public boolean ocupado;
-
+    private boolean ocupado;
     private double valor;
 
-
-
-
+    public void ocupar() {
+        this.setOcupado(true);
+    }
 
     public boolean isOcupado() {
         return ocupado;
@@ -23,5 +22,4 @@ public abstract class Assento {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
 }

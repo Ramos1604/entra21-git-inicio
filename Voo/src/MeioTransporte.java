@@ -1,5 +1,6 @@
 public interface MeioTransporte {
-
-    private boolean
-
+    public boolean verificaOcupacao(String assento);
+    public int quantidadeLivre();
+    public void mostrarAssentos();
+    public Assento getAssento(String assento);
 }

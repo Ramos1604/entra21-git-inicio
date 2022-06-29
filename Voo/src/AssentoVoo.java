@@ -1,13 +1,7 @@
-public class AssentoVoo {
 
+public class AssentoVoo extends Assento{
     private String codigo;
-
-    private String Classe;
-
-
-
-
-
+    private ClasseAssentoVoo classe;
 
     public String getCodigo() {
         return codigo;
@@ -17,13 +11,11 @@ public class AssentoVoo {
         this.codigo = codigo;
     }
 
-    public String getClasse() {
-        return Classe;
+    public ClasseAssentoVoo getClasse() {
+        return classe;
     }
 
-    public void setClasse(String classe) {
-        Classe = classe;
+    public void setClasse(ClasseAssentoVoo classe) {
+        this.classe = classe;
     }
-
-
 }

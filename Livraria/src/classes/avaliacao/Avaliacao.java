@@ -5,6 +5,16 @@ public class Avaliacao {
     private String nome;
     private String feedback;
 
+    public String getAvaliar() {
+        return avaliar;
+    }
+
+    public void setAvaliar(String avaliar) {
+        this.avaliar = avaliar;
+    }
+
+    private String avaliar;
+
     // GETTERS & SETTERS
 
     public double getRating() {
