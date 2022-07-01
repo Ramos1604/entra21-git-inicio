@@ -1,5 +1,3 @@
-package classes.guardados;
-
 import classes.itens.Item;
 
 public class Estante {

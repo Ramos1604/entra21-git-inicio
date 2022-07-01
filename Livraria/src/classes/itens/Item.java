@@ -4,7 +4,7 @@ import classes.avaliacao.Avaliacao;
 
 import java.util.Scanner;
 
-public abstract class  Item {
+public abstract class Item {
     private String titulo;
     private String genero;
     private double valor;

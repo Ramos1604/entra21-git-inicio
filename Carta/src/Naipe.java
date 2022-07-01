@@ -1,10 +1,16 @@
-public enum Naipe {;
+public enum Naipe {
+    PAUS("♣"),
+    OURO("♦"),
+    ESPADA("♠"),
+    COPAS("♥");
 
-
-    private final String Naipe;
+    private final String naipe;
 
     Naipe(String naipe) {
-        Naipe = naipe;
+        this.naipe = naipe;
+    }
 
+    public String getNaipe() {
+        return this.naipe;
     }
 }
