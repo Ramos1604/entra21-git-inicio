@@ -1,33 +1,15 @@
+package classes.guardados;
+
 import classes.itens.Item;
 
+import java.util.ArrayList;
+
 public class Estante {
-    private String[] adicionais = new String[5];
-
     private int capMaxima;
-    private Item[] itens;
-
-    public void adicionarAdicional(String adicional) {
-        for (int i = 0; i < 10; i++) {
-            if(this.adicionais[i] == null) {
-                this.adicionais[i] = adicional;
-                break;
-            }
-        }
-    }
-
-    public String[] getAdicionais() {
-        return adicionais;
-    }
-
-    public void setAdicionais(String[] adicionais) {
-        this.adicionais = adicionais;
-    }
-
+    private ArrayList<Item> itens = new ArrayList<>();
 
     public Estante(int capMaxima) {
         setCapMaxima(capMaxima);
-        setItens(new Item[capMaxima]);
-        //TODO
     }
 
     public boolean estanteCheia() {
@@ -35,39 +17,24 @@ public class Estante {
     }
 
     public int quantidadeItens() {
-        int contator = 0;
-        for (Item i : this.getItens()) {
-            if (i != null) {
-                contator ++;
-            }
-        }
-        return contator;
+        return this.itens.size();
     }
 
     public Item buscarItem(String titulo) {
-        for (Item i : this.getItens()) {
-            if (i != null && i.getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
-                return i;
-            }
-        }
-        return null;
+        return this.itens.stream().filter(i -> i.getTitulo().equalsIgnoreCase(titulo))
+                .findFirst().orElse(null);
     }
 
 
     public boolean adicionarItem(Item item) {
-        for (int i = 0; i < this.getItens().length; i++) {
-            if ( this.getItens()[i] == null ) {
-                this.getItens()[i] = item;
-                return true;
-            }
+        if (!estanteCheia()) {
+            return this.itens.add(item);
         }
         return false;
     }
 
     public Item removerItem(int posicao) {
-        Item i = this.getItens()[posicao];
-        this.getItens()[posicao] = null;
-        return i;
+        return this.itens.remove(posicao);
     }
 
     // GETTERS & SETTERS
@@ -80,11 +47,11 @@ public class Estante {
         this.capMaxima = capMaxima;
     }
 
-    public Item[] getItens() {
+    public ArrayList<Item> getItens() {
         return itens;
     }
 
-    public void setItens(Item[] itens) {
+    public void setItens(ArrayList<Item> itens) {
         this.itens = itens;
     }
 }
