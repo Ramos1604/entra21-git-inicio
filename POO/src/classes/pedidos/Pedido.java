@@ -43,7 +43,7 @@ public class Pedido {
                     System.out.println("-ADICIONAIS-");
                     for (String adicionais : s.getAdicionais()) {
                         if (adicionais != null) {
-                            System.out.println(adicional);
+                            System.out.println(adicionais);
                         }
                     }
                 }
